@@ -1,0 +1,14 @@
+# binaries
+bin/
+dist/
+lib/
+node/
+node_modules/
+.yarn.lock
+
+# editors
+*.swp
+.idea/
+.vs/
+.vscode/
+.DS_Store
