@@ -41,15 +41,15 @@ class FoodLogEdit extends Component {
 
 async handleSubmit(event) {
     event.preventDefault();
-    const {item} = this.state;
 
-    await fetch('/api/foodLogs' + (item.id ? '/' + item.id : ''), {
-        method: (item.id) ? 'PUT' : 'POST',
+    console.log('this.state', this.state);
+    await fetch('/api/foodLogs' + (this.state.id ? '/' + this.state.id : ''), {
+        method: (this.state.id) ? 'PUT' : 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(item),
+        body: JSON.stringify(this.state),
     });
     this.props.history.push('/foodLogs');
 }
