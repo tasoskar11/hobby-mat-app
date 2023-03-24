@@ -64,4 +64,12 @@ public class Recipe {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Recipe [id=" + id + ", name=" + name + ", url=" + url + ", description=" + description
+                + ", recipeIngredients=" + recipeIngredients + "]";
+    }
+
+    
 }

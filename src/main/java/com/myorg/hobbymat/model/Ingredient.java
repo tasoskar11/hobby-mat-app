@@ -41,4 +41,11 @@ public class Ingredient {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    @Override
+    public String toString() {
+        return "Ingredient [id=" + id + ", name=" + name + ", imageUrl=" + imageUrl + "]";
+    }
+
+    
 }

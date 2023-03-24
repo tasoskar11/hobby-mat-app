@@ -59,9 +59,14 @@ public class FoodLogController {
     @PutMapping("/{id}")
     public ResponseEntity updateFoodLog(@PathVariable String id, @RequestBody FoodLog foodLog) {
         FoodLog current = foodLogRepository.findById(id).orElseThrow(RuntimeException::new);
-        current.setRecipe(foodLog.getRecipe());
+        logger.info("Update request was received with body:{}", foodLog);
+        logger.info("Replacing current food log entry with body:{}", current);
+        //TODO this is a temporary approach during development. The goal is to have a validator.
+        if (foodLog.getRecipe() != null) {
+            current.setRecipe(foodLog.getRecipe());
+        }
         current.setDate(foodLog.getDate());
-        current = foodLogRepository.save(foodLog);
+        current = foodLogRepository.save(current);
 
         return ResponseEntity.ok(current);
     }

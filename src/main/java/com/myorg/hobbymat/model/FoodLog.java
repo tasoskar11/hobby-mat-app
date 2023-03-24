@@ -51,4 +51,9 @@ public class FoodLog {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "FoodLog [id=" + id + ", date=" + date + ", recipe=" + recipe + "]";
+    }
 }

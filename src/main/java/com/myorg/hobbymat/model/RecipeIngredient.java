@@ -46,4 +46,12 @@ public class RecipeIngredient {
     public void setCaloryEstimation(Double caloryEstimation) {
         this.caloryEstimation = caloryEstimation;
     }
+
+    @Override
+    public String toString() {
+        return "RecipeIngredient [ingredient=" + ingredient + ", quantity=" + quantity + ", priceEstimation="
+                + priceEstimation + ", caloryEstimation=" + caloryEstimation + "]";
+    }
+
+    
 }
