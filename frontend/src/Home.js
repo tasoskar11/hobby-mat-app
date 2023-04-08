@@ -12,6 +12,7 @@ class Home extends Component {
                 <Container fluid>
                     <Button color="link"><Link to="/foodLogs">Food Logs</Link></Button>
                     <Button color="link"><Link to="/ingredients">Ingredients</Link></Button>
+                    <Button color="link"><Link to="/recipes">Recipes</Link></Button>
                 </Container>
             </div>
         );
